@@ -1,0 +1,15 @@
+#!/bin/sh
+commit_message=$(cat "$1")
+
+commit_message_length=$(echo "$commit_message" | wc -c)
+if [ "$commit_message_length" -gt 50 ]; then
+  echo "Commit message is too long!"
+  exit 1
+fi
+
+commit_types="(feature|fix|refactor|wip)"
+correct_commit_regex="^${commit_types}\:.+$"
+if ! [[ "$commit_message" =~ $correct_commit_regex ]]; then
+  echo "Format is not correct!"
+  exit 1
+fi
