@@ -3,7 +3,7 @@ This repository contains the commit-msg file, which represents a Git hook script
 
 ## Required format
 Required format that messages should have is <type>:<description> and message shouldn't be longer than 50 characters. 
-- `<type>: <description>`
+- `<type>:<description>`
   - `<type>` should be one of the following:
     - `feature` (for new feature development)
     - `fix` (for bug fixes)
