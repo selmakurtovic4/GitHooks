@@ -54,13 +54,14 @@ The `commit-msg` hook script is executed automatically each time you make a comm
    - Move the downloaded `commit-msg` hook file into the `.git/hooks/` directory of your local repository.
 
 3. **Make the Hook File Executable (On Unix-Like Systems):**
+   - Rename the `commit-msg.sample` file by removing the `.sample` extension. If this renaming step does not work as expected or if you encounter issues, follow the next step.
    - If you are using a Unix-like operating system (e.g., Linux or macOS), you may need to make the hook file executable. You can do this with the following command:
 
      ```shell
      chmod +x .git/hooks/commit-msg
      ```
 
-4. **Commit with Enforced Commit Message Format:**
+5. **Commit with Enforced Commit Message Format:**
    - Now, every time you make a commit in your local repository, the `commit-msg` hook script will automatically validate your commit message against the specified rules.
 
    - If the commit message does not meet the required format or exceeds the character limit, the script will prevent the commit with an error message.
