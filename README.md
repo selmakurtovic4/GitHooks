@@ -1,4 +1,4 @@
-# GitHooks-Task
+# GitHooks
 This repository contains the commit-msg file, which represents a Git hook script for enforcing a standardized commit message format.
 
 ## Required format
